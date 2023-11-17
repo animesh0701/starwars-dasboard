@@ -40,7 +40,7 @@ const Aside = () => {
           <AccordionPanel>
             <List spacing={3}>
               <ListItem>
-                <Image src={category}></Image>
+                <Image src={films}></Image>
                 <span>Film 1</span>
               </ListItem>
             </List>
