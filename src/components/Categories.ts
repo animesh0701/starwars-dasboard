@@ -1,0 +1,1 @@
+export const categories = ['films', 'people', 'planets', 'species', 'starships', 'vehicles'];
