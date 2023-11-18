@@ -25,6 +25,7 @@ import switch0 from "../assets/switch0.svg";
 import switch1 from "../assets/switch1.svg";
 import FilmLogo from "../assets/icons/films.svg";
 import Menu from "../assets/Menu.svg";
+import { PopperMenu } from "./PopperMenu";
 
 const Films = () => {
   const { films, error, loading } = useFilms();
@@ -81,9 +82,7 @@ const Films = () => {
                         </Text>
                       </Td>
                       <Td>
-                        <Button bg="">
-                          <Image src={Menu}></Image>
-                        </Button>
+                        <PopperMenu film={film} />
                       </Td>
                     </Tr>
                   )

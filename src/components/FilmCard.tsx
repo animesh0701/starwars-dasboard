@@ -11,6 +11,7 @@ import {
   ButtonGroup,
   Text,
 } from "@chakra-ui/react";
+import { PopperMenu } from "./PopperMenu";
 
 interface Props {
   film: Film;
@@ -27,16 +28,14 @@ const FilmCard = ({ film }: Props) => {
       ></Image>
       <CardBody bg="#344064" borderRadius={10} p={4}>
         <HStack justifyContent={"space-between"}>
-          <HStack>
+          <HStack position="relative">
             <Image src={Films}></Image>
             <Text fontSize={"xl"} color={"white"}>
               {film.title}
             </Text>
           </HStack>
 
-          <Button padding={0} bg={""} margin={0}>
-            <Image src={MenuButton}></Image>
-          </Button>
+          <PopperMenu film={film} />
         </HStack>
       </CardBody>
     </Card>
