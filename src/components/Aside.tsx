@@ -1,54 +1,49 @@
 import React from "react";
 import { categories } from "./Categories";
-import { Box, Image, Spinner } from "@chakra-ui/react";
 import {
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-} from "@chakra-ui/react";
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
+  Text,
+  Box,
+  Image,
+  Spinner,
 } from "@chakra-ui/react";
 import fileLogo from "../assets/Vector.svg";
 import useFilms from "../hooks/useFilms";
+import SubAccordian from "./SubAccordian";
 
 const Aside = () => {
   const { films, error, loading } = useFilms();
   return (
-    <Accordion allowToggle color="white">
+    <Accordion allowToggle color="white" mt={5}>
       {categories.map((category) => (
-        <AccordionItem key={category.type}>
-          <h2>
-            <AccordionButton _expanded={{ bg: "#CB1A80", color: "white" }}>
-              <Image src={fileLogo}></Image>
-              <Box as="span" flex="1" textAlign="left" paddingLeft="10px">
-                {category.type}
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
+        <AccordionItem
+          key={category.type}
+          border="none"
+          ml={5}
+          fontSize={"large"}
+        >
+          <AccordionButton
+            _expanded={{ bg: "#CB1A80", color: "white" }}
+            borderRadius={10}
+            pt={4}
+            pb={4}
+            pl={5}
+          >
+            <Image src={fileLogo}></Image>
+            <Box as="span" flex="1" textAlign="left" paddingLeft="10px">
+              <Text fontSize={"xl"}>{category.type}</Text>
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+
           <AccordionPanel>
-            <List spacing={3}>
-              {error && <p color="red">{error}</p>}
-              {loading && <Spinner color="white">loading</Spinner>}
-              {category.type === "Films" &&
-                films.map((film) => (
-                  <ListItem key={film.title}>
-                    <Image src={category.image}></Image>
-                    {film.title}
-                  </ListItem>
-                ))}
-              <ListItem>
-                {}
-                <span>Film 1</span>
-              </ListItem>
-            </List>
+            {error && <p color="red">{error}</p>}
+            {loading && <Spinner color="white">loading</Spinner>}
+            {category.type === "Films" && <SubAccordian films={films} />}
           </AccordionPanel>
         </AccordionItem>
       ))}

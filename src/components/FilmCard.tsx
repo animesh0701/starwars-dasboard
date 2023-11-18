@@ -18,13 +18,23 @@ interface Props {
 
 const FilmCard = ({ film }: Props) => {
   return (
-    <Card>
-      <Image src="https://picsum.photos/50"></Image>
-      <CardBody bg="grey">
-        <HStack>
-          <Image src={Films}></Image>
-          <Text>{film.title}</Text>
-          <Button padding={0} bg={"black"} margin={0}>
+    <Card bg="transparent">
+      <Image
+        src="https://picsum.photos/50"
+        borderRadius={10}
+        marginBottom={1.5}
+        h={180}
+      ></Image>
+      <CardBody bg="#344064" borderRadius={10} p={4}>
+        <HStack justifyContent={"space-between"}>
+          <HStack>
+            <Image src={Films}></Image>
+            <Text fontSize={"xl"} color={"white"}>
+              {film.title}
+            </Text>
+          </HStack>
+
+          <Button padding={0} bg={""} margin={0}>
             <Image src={MenuButton}></Image>
           </Button>
         </HStack>
