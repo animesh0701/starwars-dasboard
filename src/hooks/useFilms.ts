@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import apiClient from "../services/api-client";
-import { CanceledError } from "../services/api-client";
+import useData from "./useData";
 
 export interface Film {
     title: string,
@@ -9,35 +7,6 @@ export interface Film {
     opening_crawl:string
 }
 
-export interface FetchFilmsResponse{
-    count: number,
-    results: Film[],
-}
-
-const useFilms =() => {
-    const [films, setFilms] = useState<Film[]>([]);
-    const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
-  
-    useEffect(() => {
-      setLoading(true);
-      const controller = new AbortController();
-      apiClient.get<FetchFilmsResponse>("/films",{
-        signal: controller.signal,
-       })
-        .then((res) => {
-          setFilms(res.data.results);
-          setLoading(false);
-        })
-        .catch((err) => {
-          if (err instanceof CanceledError) return;
-          setError(err.message);
-          setLoading(false);
-        });
-  
-    }, []);
-
-    return {films,error,loading}
-}
+const useFilms =() => useData<Film>("/films");
 
 export default useFilms;

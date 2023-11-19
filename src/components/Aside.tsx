@@ -16,7 +16,7 @@ import useFilms from "../hooks/useFilms";
 import SubAccordian from "./SubAccordian";
 
 const Aside = () => {
-  const { films, error, loading } = useFilms();
+  const { data, error, loading } = useFilms();
   return (
     <Accordion allowToggle color="white" mt={5}>
       {categories.map((category) => (
@@ -43,7 +43,7 @@ const Aside = () => {
           <AccordionPanel>
             {error && <p color="red">{error}</p>}
             {loading && <Spinner color="white">loading</Spinner>}
-            {category.type === "Films" && <SubAccordian films={films} />}
+            {category.type === "Films" && <SubAccordian films={data} />}
           </AccordionPanel>
         </AccordionItem>
       ))}

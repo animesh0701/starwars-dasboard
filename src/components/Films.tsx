@@ -27,7 +27,7 @@ import FilmLogo from "../assets/icons/films.svg";
 import { PopperMenu } from "./PopperMenu";
 
 const Films = () => {
-  const { films, error, loading } = useFilms();
+  const { data, error, loading } = useFilms();
   const [grid, setGrid] = useState(true);
 
   return (
@@ -62,7 +62,7 @@ const Films = () => {
             </Tr>
 
             <Tbody>
-              {films.map(
+              {data.map(
                 (film) =>
                   !grid && (
                     <Tr key={film.title}>
@@ -91,7 +91,7 @@ const Films = () => {
         </TableContainer>
       )}
       <SimpleGrid columns={3} spacing={6} px={10}>
-        {films.map(
+        {data.map(
           (film) => grid && <FilmCard key={film.title} film={film}></FilmCard>
         )}
       </SimpleGrid>
