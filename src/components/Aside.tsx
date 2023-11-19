@@ -12,11 +12,14 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 import fileLogo from "../assets/Vector.svg";
-import useFilms from "../hooks/useFilms";
-import SubAccordian from "./SubAccordian";
+import SpeciesAccordian from "./accordians/SpeciesAccordian";
+import PlanetsAccordian from "./accordians/PlanetsAccordian";
+import VehiclesAccordian from "./accordians/VehiclesAccordian";
+import StarshipsAccordian from "./accordians/StarshipsAccordian";
+import PeopleAccordian from "./accordians/PeopleAccordian";
+import FilmsAccordian from "./accordians/FilmsAccordian";
 
 const Aside = () => {
-  const { data, error, loading } = useFilms();
   return (
     <Accordion allowToggle color="white" mt={5}>
       {categories.map((category) => (
@@ -41,9 +44,24 @@ const Aside = () => {
           </AccordionButton>
 
           <AccordionPanel>
-            {error && <p color="red">{error}</p>}
-            {loading && <Spinner color="white">loading</Spinner>}
-            {category.type === "Films" && <SubAccordian films={data} />}
+            {category.type === "Films" && (
+              <FilmsAccordian icon={category.image} />
+            )}
+            {category.type === "Species" && (
+              <SpeciesAccordian icon={category.image} />
+            )}
+            {category.type === "Planets" && (
+              <PlanetsAccordian icon={category.image} />
+            )}
+            {category.type === "Vehicles" && (
+              <VehiclesAccordian icon={category.image} />
+            )}
+            {category.type === "Starships" && (
+              <StarshipsAccordian icon={category.image} />
+            )}
+            {category.type === "People" && (
+              <PeopleAccordian icon={category.image} />
+            )}
           </AccordionPanel>
         </AccordionItem>
       ))}

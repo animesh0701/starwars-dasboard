@@ -11,18 +11,18 @@ export const categories = [
 image:Films,
 },
 
-{type:'people',
+{type:'People',
 image:people},
 
-{type:'planets',
+{type:'Planets',
 image:planets},
 
-{type:'species',
+{type:'Species',
 image:species},
 
-{type:'starships',
+{type:'Starships',
 image:starships},
 
-{type:'vehicles',
+{type:'Vehicles',
 image:vehicles},];
 

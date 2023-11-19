@@ -34,7 +34,13 @@ const Films = () => {
     <>
       <HStack justifyContent={"space-between"} pl={10} pr={6} py={6}>
         <Text fontSize={"xl"}>Films</Text>
-        <Button bg="" onClick={() => setGrid(!grid)}>
+        <Button
+          bg=""
+          onClick={() => setGrid(!grid)}
+          _hover={{ bg: "" }}
+          p={0}
+          mr={4}
+        >
           {grid ? <Image src={switch0}></Image> : <Image src={switch1}></Image>}
         </Button>
       </HStack>

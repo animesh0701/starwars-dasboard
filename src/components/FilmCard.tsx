@@ -21,7 +21,7 @@ const FilmCard = ({ film }: Props) => {
   return (
     <Card bg="transparent">
       <Image
-        src="https://picsum.photos/200/300?random=1"
+        src="https://static-ca.gamestop.ca/images/products/762907/7scrmax2.jpg"
         borderRadius={10}
         marginBottom={1.5}
         h={180}

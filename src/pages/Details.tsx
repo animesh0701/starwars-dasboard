@@ -72,6 +72,8 @@ const Details = () => {
                     mb={4}
                     p={4}
                     w={1150}
+                    as="span"
+                    textAlign="left"
                   >
                     <Text
                       fontSize={"xl"}
@@ -93,6 +95,8 @@ const Details = () => {
                     mb={4}
                     p={4}
                     w={1150}
+                    as="span"
+                    textAlign="left"
                   >
                     <Text
                       fontSize={"xl"}

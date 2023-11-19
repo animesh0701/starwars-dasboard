@@ -26,7 +26,7 @@ import {
 import menu from "../assets/Menu.svg";
 import { Film } from "../hooks/useFilms";
 import Details from "../pages/Details";
-import DeleteFilm from "./deletefilm";
+import DeleteFilm from "./DeleteFilm";
 
 interface Props {
   film: Film;
@@ -36,7 +36,7 @@ export const PopperMenu = ({ film }: Props) => {
   return (
     <>
       <Menu>
-        <MenuButton as={Button} bg="">
+        <MenuButton as={Button} bg="#F9FAFD33" p={2}>
           <Image src={menu}></Image>
         </MenuButton>
         <MenuList color={"black"}>
