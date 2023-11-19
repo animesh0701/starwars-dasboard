@@ -1,4 +1,4 @@
-import Films from "../components/Films";
+import Films from "../components/Films"; //Film component import
 
 const Film = () => {
   return (

@@ -1,4 +1,5 @@
-import { categories } from "./Categories";
+import { categories } from "./Categories";  //category array import
+
 import {
   Accordion,
   AccordionItem,
@@ -8,14 +9,16 @@ import {
   Text,
   Box,
   Image,
-} from "@chakra-ui/react";
-import fileLogo from "../assets/Vector.svg";
+} from "@chakra-ui/react";               //Chakra UI component
+
+import fileLogo from "../assets/Vector.svg";        //Icon import
+
 import SpeciesAccordian from "./accordians/SpeciesAccordian";
 import PlanetsAccordian from "./accordians/PlanetsAccordian";
 import VehiclesAccordian from "./accordians/VehiclesAccordian";
 import StarshipsAccordian from "./accordians/StarshipsAccordian";
 import PeopleAccordian from "./accordians/PeopleAccordian";
-import FilmsAccordian from "./accordians/FilmsAccordian";
+import FilmsAccordian from "./accordians/FilmsAccordian";      //Sub-accordian imports
 
 const Aside = () => {
   return (

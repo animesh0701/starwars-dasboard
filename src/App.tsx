@@ -1,11 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; //Routing component
+
 import Home from "./pages/Home";
 import Films from "./pages/Film";
-import Details from "./pages/Details";
-import { Grid, GridItem, Show } from "@chakra-ui/react";
-import "./App.css";
+import Details from "./pages/Details"; //page imports
+
 import { NavBar } from "./components/NavBar";
-import Aside from "./components/Aside";
+import Aside from "./components/Aside"; //component imports
+
+import { Grid, GridItem, Show } from "@chakra-ui/react";
+import "./App.css"; // styles import
 
 function App() {
   return (
