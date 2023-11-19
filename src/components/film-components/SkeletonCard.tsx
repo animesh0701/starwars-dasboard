@@ -10,9 +10,9 @@ import {
 
 const SkeletonCard = () => {
   return (
-    <Card>
+    <Card bg="transparent" borderRadius={10} h={250} w={350}>
       <Skeleton height="200px" />
-      <CardBody>
+      <CardBody bg="#344064" borderRadius={10} p={4}>
         <SkeletonText />
       </CardBody>
     </Card>
