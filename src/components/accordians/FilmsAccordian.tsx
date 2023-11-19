@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Accordion,
   AccordionItem,
@@ -14,6 +13,7 @@ import useFilms from "../../hooks/useFilms";
 import moment from "moment";
 
 interface Props {
+  //custom Interface for specifc data
   icon: string;
 }
 

@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useState } from "react"; //react imports
 
-import { HStack, Spinner, Button, Image, Text } from "@chakra-ui/react";
-import useFilms from "../hooks/useFilms";
+import { HStack, Button, Image, Text } from "@chakra-ui/react"; //chakra Ui imports
+
 import switch0 from "../../public/Switch0.svg";
-import switch1 from "../../public/Switch1.svg";
+import switch1 from "../../public/Switch1.svg"; //Icon imports
+
 import FilmsTable from "./film-components/FilmsTable";
-import FilmGrid from "./film-components/FilmGrid";
+import FilmGrid from "./film-components/FilmGrid"; //Film Sub componets imports
 
 const Films = () => {
-  const [grid, setGrid] = useState(true);
+  const [grid, setGrid] = useState(true); //Grid/list switch state variable
 
   return (
     <>

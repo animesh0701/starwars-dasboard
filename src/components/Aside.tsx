@@ -1,4 +1,3 @@
-import React from "react";
 import { categories } from "./Categories";
 import {
   Accordion,
@@ -9,7 +8,6 @@ import {
   Text,
   Box,
   Image,
-  Spinner,
 } from "@chakra-ui/react";
 import fileLogo from "../assets/Vector.svg";
 import SpeciesAccordian from "./accordians/SpeciesAccordian";

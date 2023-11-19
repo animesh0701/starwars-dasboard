@@ -1,5 +1,4 @@
-import React from "react";
-import moment from "moment";
+import moment from "moment"; //moment.js for date format
 
 import {
   Table,
@@ -11,11 +10,14 @@ import {
   Image,
   Text,
   Thead,
-} from "@chakra-ui/react";
-import useFilms from "../../hooks/useFilms";
-import { PopperMenu } from "./PopperMenu";
-import FilmLogo from "../../assets/icons/films.svg";
+} from "@chakra-ui/react"; //Chakra UI components
+
+import useFilms from "../../hooks/useFilms"; //film hook import
+
+import { PopperMenu } from "./PopperMenu"; //components import
 import SkeletonTable from "./SkeletonTable";
+
+import FilmLogo from "../../assets/icons/films.svg"; //icon import
 
 const FilmsTable = () => {
   const { data, error, loading } = useFilms();

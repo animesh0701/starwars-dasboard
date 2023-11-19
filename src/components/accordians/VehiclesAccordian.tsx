@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Accordion,
   AccordionItem,
@@ -9,7 +8,7 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
-import useVehicles from "../../hooks/useVehicles";
+import useVehicles from "../../hooks/useVehicles"; //custom Interface for specifc data
 
 interface Props {
   icon: string;

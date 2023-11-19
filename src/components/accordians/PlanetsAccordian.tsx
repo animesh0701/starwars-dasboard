@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Accordion,
   AccordionItem,
@@ -12,6 +11,7 @@ import {
 import usePlanets from "../../hooks/usePlanets";
 
 interface Props {
+  //custom Interface for specifc data
   icon: string;
 }
 

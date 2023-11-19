@@ -2,15 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Films from "./pages/Film";
 import Details from "./pages/Details";
-import {
-  Grid,
-  GridItem,
-  Show,
-  Box,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
 import Aside from "./components/Aside";

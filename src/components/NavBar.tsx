@@ -1,7 +1,8 @@
-import React from "react";
-import { HStack, Image } from "@chakra-ui/react";
-import logo from "../assets/logo.svg";
-import SearchBar from "./SearchBar";
+import logo from "../assets/logo.svg"; //image import
+
+import SearchBar from "./SearchBar"; //component import
+
+import { HStack, Image } from "@chakra-ui/react"; //chakra UI component
 
 export const NavBar = () => {
   return (

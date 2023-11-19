@@ -1,14 +1,12 @@
 import { Link as ReactRouterLink } from "react-router-dom";
-import { Link as ChakraLink, LinkProps } from "@chakra-ui/react";
+import { Link as ChakraLink } from "@chakra-ui/react";
+import { useLocation } from "react-router-dom"; //Routing  Imports
+
 import {
   Table,
-  Thead,
   Tbody,
-  Tfoot,
   Tr,
-  Th,
   Td,
-  TableCaption,
   TableContainer,
   Text,
   Image,
@@ -16,13 +14,12 @@ import {
   HStack,
   Box,
   VStack,
-} from "@chakra-ui/react";
-
-import { useLocation } from "react-router-dom";
+} from "@chakra-ui/react"; // chakra imports
 
 const Details = () => {
   const location = useLocation();
-  const film = location.state.film;
+  const film = location.state.film; //fethcing the props passed through link from state
+
   return (
     <div>
       <TableContainer pl={10} pr={10} mr={2}>
@@ -40,6 +37,7 @@ const Details = () => {
                 </HStack>
               </Td>
             </Tr>
+
             <Tr>
               <Td>
                 <Box
@@ -108,6 +106,7 @@ const Details = () => {
                 </VStack>
               </Td>
             </Tr>
+
             <Tr>
               <Td>
                 <VStack mt={2}>

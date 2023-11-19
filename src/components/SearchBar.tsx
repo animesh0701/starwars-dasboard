@@ -1,12 +1,5 @@
-import React from "react";
-import {
-  Button,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightAddon,
-} from "@chakra-ui/react";
-import { Search2Icon } from "@chakra-ui/icons";
+import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Search2Icon } from "@chakra-ui/icons"; //Chakra Ui impots
 
 const SearchBar = () => {
   return (

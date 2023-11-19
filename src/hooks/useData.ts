@@ -4,7 +4,7 @@ import { CanceledError } from "../services/api-client";
 
 
 
-export interface FetchResponse<T>{
+export interface FetchResponse<T>{          //Interface to fecth only the result object of the fetch request
     count: number,
     results: T[],
 }
@@ -12,27 +12,27 @@ export interface FetchResponse<T>{
 const useData =<T>(endpoint:string) => {
     const [data, setData] = useState<T[]>([]);
     const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);  //this state varible manages the lading state
   
     useEffect(() => {
       setLoading(true);
-      const controller = new AbortController();
+      const controller = new AbortController();  //defined a controller to  use abort controller
       apiClient.get<FetchResponse<T>>(endpoint,{
         signal: controller.signal,
        })
-        .then((res) => {
+        .then((res) => {                        //Then fucntion to receive data from the promise and change loading state
           setData(res.data.results);
           setLoading(false);
         })
         .catch((err) => {
-          if (err instanceof CanceledError) return;
+          if (err instanceof CanceledError) return;    //Error handling 
           setError(err.message);
           setLoading(false);
         });
   
     }, []);
 
-    return {data,error,loading}
+    return {data,error,loading}             //returning data,error and loading states
 }
 
 export default useData;

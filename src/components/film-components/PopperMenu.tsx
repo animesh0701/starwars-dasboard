@@ -36,6 +36,7 @@ export const PopperMenu = ({ film }: Props) => {
         <MenuButton as={Button} bg="#F9FAFD33" p={2}>
           <Image src={menu}></Image>
         </MenuButton>
+
         <MenuList color={"black"}>
           <MenuItem>
             <Image src={view}></Image>
@@ -43,26 +44,32 @@ export const PopperMenu = ({ film }: Props) => {
               <Text pl={2}>View</Text>
             </Link>
           </MenuItem>
+
           <MenuItem>
             <Image src={download}></Image>
             <Text pl={2}>Download</Text>
           </MenuItem>
+
           <MenuItem>
             <Image src={edit}></Image>
             <Text pl={2}>Rename</Text>
           </MenuItem>
+
           <MenuItem>
             <Image src={share}></Image>
             <Text pl={2}>Share Link</Text>
           </MenuItem>
+
           <MenuItem>
             <Image src={move}></Image>
             <Text pl={2}>move</Text>
           </MenuItem>
+
           <MenuItem>
             <Image src={lock}></Image>
             <Text pl={2}>Mark Private</Text>
           </MenuItem>
+
           <DeleteFilm film={film} />
         </MenuList>
       </Menu>

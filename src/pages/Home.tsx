@@ -11,6 +11,7 @@ const Home = () => {
           w="100%"
           borderRadius={15}
         ></Image>
+
         <VStack p={4}>
           <Text fontSize={["2xl", "3xl", "4xl"]} color={"black"}>
             Welcome to Start Wars Dashboard

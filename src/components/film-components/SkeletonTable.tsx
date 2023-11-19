@@ -1,16 +1,11 @@
-import React from "react";
 import {
   Table,
   Tbody,
   Tr,
   Td,
   TableContainer,
-  HStack,
-  Image,
-  Text,
-  Skeleton,
   SkeletonText,
-} from "@chakra-ui/react";
+} from "@chakra-ui/react"; //skeleton related imports from chakra UI
 
 const SkeletonTable = () => {
   return (
@@ -22,16 +17,19 @@ const SkeletonTable = () => {
               <SkeletonText height="50px" />
             </Td>
           </Tr>
+
           <Tr>
             <Td>
               <SkeletonText height="50px" />
             </Td>
           </Tr>
+
           <Tr>
             <Td>
               <SkeletonText height="50px" />
             </Td>
           </Tr>
+
           <Tr>
             <Td>
               <SkeletonText height="50px" />
