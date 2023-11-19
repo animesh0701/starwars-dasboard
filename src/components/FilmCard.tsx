@@ -21,7 +21,7 @@ const FilmCard = ({ film }: Props) => {
   return (
     <Card bg="transparent">
       <Image
-        src="https://picsum.photos/50"
+        src="https://picsum.photos/200/300?random=1"
         borderRadius={10}
         marginBottom={1.5}
         h={180}

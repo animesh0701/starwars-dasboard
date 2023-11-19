@@ -1,7 +1,19 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Films from "./pages/Film";
+import Details from "./pages/Details";
+import {
+  Grid,
+  GridItem,
+  Show,
+  Box,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import "./App.css";
 import { NavBar } from "./components/NavBar";
 import Aside from "./components/Aside";
-import Films from "./components/Films";
 
 function App() {
   return (
@@ -11,6 +23,7 @@ function App() {
           base: `"nav" "main"`,
           lg: `"nav nav""aside main"`,
         }}
+        h={"100vh"}
       >
         <GridItem area="nav" bg="#03123D">
           <NavBar />
@@ -23,7 +36,14 @@ function App() {
         </Show>
 
         <GridItem area="main" bg="#03123D" color="white">
-          <Films />
+          <BrowserRouter>
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/film" element={<Films />} />
+              <Route path="/details" element={<Details />}></Route>
+            </Routes>
+          </BrowserRouter>
         </GridItem>
       </Grid>
     </div>

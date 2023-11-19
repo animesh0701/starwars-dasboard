@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, createContext } from "react";
 import moment from "moment";
 import { SimpleGrid } from "@chakra-ui/react";
 import {
@@ -19,12 +19,11 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import useFilms from "../hooks/useFilms";
+import useFilms, { Film } from "../hooks/useFilms";
 import FilmCard from "./FilmCard";
 import switch0 from "../assets/switch0.svg";
 import switch1 from "../assets/switch1.svg";
 import FilmLogo from "../assets/icons/films.svg";
-import Menu from "../assets/Menu.svg";
 import { PopperMenu } from "./PopperMenu";
 
 const Films = () => {

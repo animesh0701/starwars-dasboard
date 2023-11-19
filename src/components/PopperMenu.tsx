@@ -1,5 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink, LinkProps } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 //importing icons
 import view from "../assets/popup-icons/eye.svg";
 import share from "../assets/popup-icons/share.svg";
@@ -23,6 +25,8 @@ import {
 
 import menu from "../assets/Menu.svg";
 import { Film } from "../hooks/useFilms";
+import Details from "../pages/Details";
+import DeleteFilm from "./deletefilm";
 
 interface Props {
   film: Film;
@@ -38,7 +42,9 @@ export const PopperMenu = ({ film }: Props) => {
         <MenuList color={"black"}>
           <MenuItem>
             <Image src={view}></Image>
-            <Text pl={2}>View</Text>
+            <Link to="/details" state={{ film: film }}>
+              <Text pl={2}>View</Text>
+            </Link>
           </MenuItem>
           <MenuItem>
             <Image src={download}></Image>
@@ -60,10 +66,7 @@ export const PopperMenu = ({ film }: Props) => {
             <Image src={lock}></Image>
             <Text pl={2}>Mark Private</Text>
           </MenuItem>
-          <MenuItem color={"red"}>
-            <Image src={remove}></Image>
-            <Text pl={2}>Delete</Text>
-          </MenuItem>
+          <DeleteFilm film={film} />
         </MenuList>
       </Menu>
     </>

@@ -35,7 +35,10 @@ const SubAccordian = ({ films }: Props) => {
             </Box>
             <AccordionIcon />
           </AccordionButton>
-          <AccordionPanel>{film.opening_crawl}</AccordionPanel>
+          <AccordionPanel>
+            <Text fontSize={"sm"}>Director : {film.director}</Text>
+            <Text fontSize={"xs"}>{film.opening_crawl}</Text>
+          </AccordionPanel>
         </AccordionItem>
       ))}
     </Accordion>
