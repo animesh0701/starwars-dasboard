@@ -11,7 +11,7 @@ import { Search2Icon } from "@chakra-ui/icons";
 const SearchBar = () => {
   return (
     <>
-      <InputGroup borderRadius={5} size="lg" w={250}>
+      <InputGroup borderRadius={5} size="lg" w={[200, 230, 250]}>
         <InputLeftElement
           pointerEvents="none"
           children={<Search2Icon color="white" />}

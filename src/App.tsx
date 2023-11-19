@@ -23,19 +23,28 @@ function App() {
           base: `"nav" "main"`,
           lg: `"nav nav""aside main"`,
         }}
-        h={"100vh"}
+        gridTemplateRows={"13vh 1fr 30px"}
+        gridTemplateColumns={[
+          "100vw 1fr",
+          "100vw 1fr",
+          "100vw 1fr",
+          "20vw 1fr",
+          "20vw 1fr",
+        ]}
+        h="100vh"
+        w="100vw"
       >
-        <GridItem area="nav" bg="#03123D">
+        <GridItem area="nav" bg="#03123D" h="0vh" mb="0px">
           <NavBar />
         </GridItem>
 
         <Show above="lg">
-          <GridItem area="aside" bg="#03123B">
+          <GridItem area="aside" bg="#03123B" w="20vw">
             <Aside />
           </GridItem>
         </Show>
 
-        <GridItem area="main" bg="#03123D" color="white">
+        <GridItem area="main" bg="#03123D" color="white" pb={20}>
           <BrowserRouter>
             <Routes>
               <Route index element={<Home />} />

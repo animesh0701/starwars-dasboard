@@ -21,7 +21,7 @@ const FilmCard = ({ film }: Props) => {
         <HStack justifyContent={"space-between"}>
           <HStack position="relative">
             <Image src={Films}></Image>
-            <Text fontSize={"xl"} color={"white"}>
+            <Text fontSize={["sm", "lg", "xl"]} color={"white"}>
               {film.title}
             </Text>
           </HStack>

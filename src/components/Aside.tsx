@@ -21,13 +21,13 @@ import FilmsAccordian from "./accordians/FilmsAccordian";
 
 const Aside = () => {
   return (
-    <Accordion allowToggle color="white" mt={5}>
+    <Accordion allowToggle color="white" mt={3} w="100%">
       {categories.map((category) => (
         <AccordionItem
           key={category.type}
           border="none"
           ml={5}
-          fontSize={"large"}
+          fontSize={["sm", "lg", "xl"]}
         >
           <AccordionButton
             _expanded={{ bg: "#CB1A80", color: "white" }}
@@ -36,9 +36,9 @@ const Aside = () => {
             pb={4}
             pl={5}
           >
-            <Image src={fileLogo}></Image>
+            <Image src={fileLogo} boxSize="24px"></Image>
             <Box as="span" flex="1" textAlign="left" paddingLeft="10px">
-              <Text fontSize={"xl"}>{category.type}</Text>
+              <Text fontSize={["sm", "lg", "xl"]}>{category.type}</Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>

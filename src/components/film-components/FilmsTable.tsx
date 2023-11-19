@@ -10,6 +10,7 @@ import {
   HStack,
   Image,
   Text,
+  Thead,
 } from "@chakra-ui/react";
 import useFilms from "../../hooks/useFilms";
 import { PopperMenu } from "./PopperMenu";
@@ -22,33 +23,39 @@ const FilmsTable = () => {
     <>
       <TableContainer pl={10} pr={10}>
         <Table size="sm">
-          <Tr>
-            <Td bg="#344064" borderLeftRadius={10} p={4} color={"white"}>
-              <Text fontSize={"xl"}>Name</Text>
-            </Td>
-            <Td bg="#344064" p={4} color={"white"}>
-              <Text fontSize={"xl"}>Director</Text>
-            </Td>
-            <Td bg="#344064" p={4} color={"white"}>
-              <Text fontSize={"xl"}>Release Date</Text>
-            </Td>
-            <Td bg="#344064" borderRightRadius={10} p={4} color={"white"}></Td>
-          </Tr>
-
+          <Thead>
+            <Tr>
+              <Td bg="#344064" borderLeftRadius={10} p={4} color={"white"}>
+                <Text fontSize={["sm", "lg", "xl"]}>Name</Text>
+              </Td>
+              <Td bg="#344064" p={4} color={"white"}>
+                <Text fontSize={["sm", "lg", "xl"]}>Director</Text>
+              </Td>
+              <Td bg="#344064" p={4} color={"white"}>
+                <Text fontSize={["sm", "lg", "xl"]}>Release Date</Text>
+              </Td>
+              <Td
+                bg="#344064"
+                borderRightRadius={10}
+                p={4}
+                color={"white"}
+              ></Td>
+            </Tr>
+          </Thead>
           <Tbody>
             {data.map((film) => (
-              <Tr key={film.title}>
+              <Tr key={film.title} w={10000}>
                 <Td pt={5} pb={5}>
                   <HStack>
                     <Image src={FilmLogo}></Image>
-                    <Text fontSize={"xl"}>{film.title}</Text>
+                    <Text fontSize={["sm", "lg", "xl"]}>{film.title}</Text>
                   </HStack>
                 </Td>
                 <Td pt={5} pb={5}>
-                  <Text fontSize={"xl"}>{film.director}</Text>
+                  <Text fontSize={["sm", "lg", "xl"]}>{film.director}</Text>
                 </Td>
                 <Td pt={5} pb={5}>
-                  <Text fontSize={"xl"}>
+                  <Text fontSize={["sm", "lg", "xl"]}>
                     {moment(film.release_date).format("MMMM D,YYYY")}
                   </Text>
                 </Td>

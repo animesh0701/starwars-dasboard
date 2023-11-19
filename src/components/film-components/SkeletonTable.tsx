@@ -9,6 +9,7 @@ import {
   Image,
   Text,
   Skeleton,
+  SkeletonText,
 } from "@chakra-ui/react";
 
 const SkeletonTable = () => {
@@ -18,22 +19,22 @@ const SkeletonTable = () => {
         <Tbody>
           <Tr>
             <Td>
-              <Skeleton height="20px" />
+              <SkeletonText height="50px" />
             </Td>
           </Tr>
           <Tr>
             <Td>
-              <Skeleton height="20px" />
+              <SkeletonText height="50px" />
             </Td>
           </Tr>
           <Tr>
             <Td>
-              <Skeleton height="20px" />
+              <SkeletonText height="50px" />
             </Td>
           </Tr>
           <Tr>
             <Td>
-              <Skeleton height="20px" />
+              <SkeletonText height="50px" />
             </Td>
           </Tr>
         </Tbody>

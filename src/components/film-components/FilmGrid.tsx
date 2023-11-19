@@ -9,7 +9,7 @@ const FilmGrid = () => {
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
-    <SimpleGrid columns={3} spacing={6} px={10}>
+    <SimpleGrid columns={[1, 2, 3]} spacing={6} px={10}>
       {loading && skeletons.map((skeleton) => <SkeletonCard key={skeleton} />)}
       {data.map((film) => (
         <FilmCard key={film.title} film={film}></FilmCard>

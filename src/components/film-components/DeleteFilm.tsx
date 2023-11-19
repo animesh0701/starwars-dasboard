@@ -32,12 +32,13 @@ const DeleteFilm = ({ film }: Props) => {
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent bg={"#e3e3e3"} p={2}>
-          <Image src={alert} boxSize={16}></Image>
-          <ModalHeader>Caution!</ModalHeader>
+        <ModalContent bg={"#e3e3e3"} p={2} m={"auto"} ml={4} mr={4}>
+          <Image ml={6} mt={2} src={alert} boxSize={16}></Image>
+          <ModalHeader fontSize={"3xl"}>Caution!</ModalHeader>
           <ModalCloseButton />
-          <ModalBody></ModalBody>
-          <Text>Are you sure you want to delete "{film.title}"?</Text>
+          <ModalBody>
+            <Text>Are you sure you want to delete "{film.title}"?</Text>
+          </ModalBody>
           <ModalFooter>
             <Button
               colorScheme="grey"
@@ -47,7 +48,9 @@ const DeleteFilm = ({ film }: Props) => {
             >
               Cancel
             </Button>
-            <Button colorScheme="red">Yes</Button>
+            <Button colorScheme="red" pl={7} pr={7}>
+              Yes
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
