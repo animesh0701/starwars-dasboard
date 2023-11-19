@@ -47,7 +47,7 @@ function App() {
         <GridItem area="main" bg="#03123D" color="white" pb={20}>
           <BrowserRouter>
             <Routes>
-              <Route index element={<Home />} />
+              <Route index element={<Films />} />
               <Route path="/home" element={<Home />} />
               <Route path="/film" element={<Films />} />
               <Route path="/details" element={<Details />}></Route>
