@@ -13,12 +13,14 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@rollup/plugin-image": "^3.0.3",
     "axios": "^1.6.2",
     "framer-motion": "^10.16.5",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.19.0"
+    "react-router-dom": "^6.19.0",
+    "rollup-plugin-svg": "^2.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
