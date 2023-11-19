@@ -1,15 +1,14 @@
 import React from "react";
-import { Link as ReactRouterLink } from "react-router-dom";
-import { Link as ChakraLink, LinkProps } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+
 //importing icons
-import view from "../assets/popup-icons/eye.svg";
-import share from "../assets/popup-icons/share.svg";
-import download from "../assets/popup-icons/download.svg";
-import edit from "../assets/popup-icons/edit.svg";
-import move from "../assets/popup-icons/move.svg";
-import lock from "../assets/popup-icons/LockSimple.svg";
-import remove from "../assets/popup-icons/delete.svg";
+import view from "../../assets/popup-icons/eye.svg";
+import share from "../../assets/popup-icons/share.svg";
+import download from "../../assets/popup-icons/download.svg";
+import edit from "../../assets/popup-icons/edit.svg";
+import move from "../../assets/popup-icons/move.svg";
+import lock from "../../assets/popup-icons/LockSimple.svg";
+import menu from "../../assets/Menu.svg";
 
 //importing menu from chakra ui
 import {
@@ -23,9 +22,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import menu from "../assets/Menu.svg";
-import { Film } from "../hooks/useFilms";
-import Details from "../pages/Details";
+import { Film } from "../../hooks/useFilms";
 import DeleteFilm from "./DeleteFilm";
 
 interface Props {

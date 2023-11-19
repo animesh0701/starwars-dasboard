@@ -13,9 +13,9 @@ import {
   Text,
   MenuItem,
 } from "@chakra-ui/react";
-import { Film } from "../hooks/useFilms";
-import alert from "../assets/popup-icons/alert-circle.svg";
-import remove from "../assets/popup-icons/delete.svg";
+import { Film } from "../../hooks/useFilms";
+import alert from "../../assets/popup-icons/alert-circle.svg";
+import remove from "../../assets/popup-icons/delete.svg";
 
 interface Props {
   film: Film;

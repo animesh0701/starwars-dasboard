@@ -17,14 +17,11 @@ import {
   Box,
   VStack,
 } from "@chakra-ui/react";
-import { Film } from "../hooks/useFilms";
 
 import { useLocation } from "react-router-dom";
 
 const Details = () => {
   const location = useLocation();
-
-  console.log(location);
   const film = location.state.film;
   return (
     <div>
