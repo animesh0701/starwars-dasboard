@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import { HStack, Spinner, Button, Image, Text } from "@chakra-ui/react";
 import useFilms from "../../hooks/useFilms";
-import switch0 from "../../assets/switch0.svg";
-import switch1 from "../../assets/switch1.svg";
+import switch0 from "../../assets/switch0.png";
+import switch1 from "../../assets/switch1.png";
 import FilmsTable from "./FilmsTable";
 import FilmGrid from "./FilmGrid";
 
